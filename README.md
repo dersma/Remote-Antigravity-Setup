@@ -1,6 +1,38 @@
-# 🚀 Remote Antigravity (Cursor Remote Style)
+# 🚀 Remote Antigravity
 
-Fernsteuerung für Antigravity von deinem iPhone über das Handynetz. Gehostet auf deiner **Synology NAS mit Docker** und angebunden an deinen **Windows-PC**.
+Steuere deine **Antigravity IDE** vom Handy aus (iPhone/Android) – über **Tailscale**, also
+**ohne eigene Domain, ohne Cloudflare, ohne Router-Freigabe und ohne NAS**.
+Dashboard, API und Bridge laufen komplett auf deinem Windows-PC.
+
+---
+
+## ⚡ Installation (Ein-Klick)
+
+**Download:** **[Neueste Version herunterladen](https://github.com/dersma/Remote-Antigravity-Setup/releases/latest)**
+
+1. Die Datei **`Remote-Antigravity-Installer.bat`** herunterladen (eine einzige Datei) und **doppelklicken**.
+   *Falls Windows warnt: „Weitere Informationen“ → „Trotzdem ausführen“.*
+2. **ENTER** drücken, **UAC bestätigen** und im Browser den **Tailscale-Login** abschließen.
+3. Am Ende erscheint eine Seite mit **QR-Code** – mit der Handy-Kamera scannen.
+   *(Tailscale-App am Handy vorher installieren und mit **demselben Konto** anmelden.)*
+
+Der Installer macht alles automatisch:
+
+- Python prüfen/installieren und eine virtuelle Umgebung mit allen Abhängigkeiten anlegen
+- **Tailscale installieren** (winget, sonst offizielles MSI) und den Login starten
+- Firewall-Regel **nur für das Tailscale-Netz** (`100.64.0.0/10`) setzen
+- Bridge/Dashboard starten (Port `8900`, bei belegtem Port automatisch `8901`+), Autostart anlegen
+- **QR-Code** mit der fertigen Dashboard-URL erzeugen
+
+**Voraussetzungen:** Windows 10/11 · **Antigravity IDE installiert und einmal gestartet**
+(erzeugt `%USERPROFILE%\.gemini\antigravity\bin\agentapi.bat`) · Internet ·
+am Handy die Tailscale-App mit demselben Konto.
+
+**Offline-Variante:** im Release die ZIP-Datei `Remote-Antigravity.zip` herunterladen → entpacken →
+im Ordner `Remote-Antigravity` die **`INSTALL.bat`** doppelklicken.
+
+👉 Ausführliche Schritt-für-Schritt-Anleitung: [`SETUP_FRIEND.md`](SETUP_FRIEND.md)
+👉 Für KI-Agenten (Antigravity, Cline …): [`AGENTS.md`](AGENTS.md)
 
 ---
 
