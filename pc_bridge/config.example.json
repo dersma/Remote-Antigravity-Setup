@@ -1,0 +1,8 @@
+{
+  "api_token": "BITTE_AUTOMATISCH_ERZEUGEN_LASSEN",
+  "workspace": "C:\\Users\\DEIN_NAME\\Projects\\Remote Antigravity",
+  "projects_root": "C:\\Users\\DEIN_NAME\\Projects",
+  "host": "0.0.0.0",
+  "port": 8900,
+  "dashboard_url": "http://100.x.y.z:8900"
+}
