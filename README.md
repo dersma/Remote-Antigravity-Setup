@@ -1,7 +1,5 @@
 # Remote Antigravity
 
-![Remote Antigravity](assets/logo.svg)
-
 Steuert die **Antigravity IDE** auf einem Windows-PC vom Handy (iPhone/Android) aus – über
 **Tailscale**, ohne eigene Domain, ohne Cloudflare, ohne Router-Freigabe und ohne NAS.
 Dashboard, API und Bridge laufen vollständig auf dem Windows-PC.
