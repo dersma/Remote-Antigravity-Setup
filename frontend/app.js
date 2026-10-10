@@ -205,7 +205,7 @@
     initSpeechRecognition();
 
     if (!(config.apiToken || '').trim()) {
-      appendLog('log-status', '[System] Kein Token gespeichert. Bitte die Onboarding-URL mit ?token=... öffnen oder das Token in den Einstellungen (⚙️) eintragen.');
+      appendLog('log-status', '[System] Kein Token gespeichert. Bitte die Onboarding-URL mit ?token=... öffnen oder das Token in den Einstellungen eintragen.');
     }
 
     checkHealthAndSync();
@@ -312,7 +312,7 @@
 
         // Bei ungueltigem/fehlendem Token nicht endlos neu verbinden (spart Akku).
         if (authFailed) {
-          appendLog('log-status', '[System] Verbindung gestoppt: Token fehlt oder ist ungültig (Einstellungen öffnen ⚙️).');
+          appendLog('log-status', '[System] Verbindung gestoppt: Token fehlt oder ist ungültig (Einstellungen öffnen).');
           return;
         }
 
@@ -768,7 +768,7 @@
     pendingAttachments.forEach((att, idx) => {
       const chip = document.createElement('span');
       chip.className = 'attachment-chip';
-      chip.innerHTML = `[Datei: ${att}] <b style="cursor:pointer" onclick="removeAttachment(${idx})">✕</b>`;
+      chip.innerHTML = `[Datei: ${att}] <b style="cursor:pointer" onclick="removeAttachment(${idx})">×</b>`;
       elAttachmentPreview.appendChild(chip);
     });
   }
@@ -794,7 +794,7 @@
         availableFiles = data.files || [];
         renderFileList(availableFiles);
       } else if (res.status === 401) {
-        elFileListContainer.textContent = 'Token ungültig - bitte in den Einstellungen (⚙️) prüfen.';
+        elFileListContainer.textContent = 'Token ungültig - bitte in den Einstellungen prüfen.';
       } else {
         elFileListContainer.textContent = `Fehler beim Laden der Dateien (HTTP ${res.status}).`;
       }
